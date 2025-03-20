@@ -1,0 +1,34 @@
+Email Service
+
+
+
+POST http://localhost:8080/api/email/send
+
+
+1)without attachment
+
+Headers tab
+Content-Type: application/x-www-form-urlencoded
+
+Body
+Go to the Body tab in Postman and select x-www-form-urlencoded.
+Add the following key-value pairs:
+
+Key	Value
+to	recipient@example.com
+subject	Hello!
+text	This is a test email.
+
+
+2)with attachment
+
+Headers tab
+Content-Type: multipart/form-data
+
+Go to the Body tab → Select form-data
+Enter the following values:
+to: recipient@example.com (as Text)
+subject: Test Email (as Text)
+text: This is a test email with an attachment. (as Text)
+attachment: Click "Choose File" and select a file (as File)
+Click "Send" to test the request.
